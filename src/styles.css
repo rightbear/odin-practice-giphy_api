@@ -23,7 +23,7 @@ body {
   height: 50vh;
 }
 
-.content input[type="text"] {
+.content input {
   padding: 5px;
   margin: 30px;
   border-radius: 5px;
