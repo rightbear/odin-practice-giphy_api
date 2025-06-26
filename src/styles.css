@@ -23,7 +23,7 @@ body {
   height: 50vh;
 }
 
-.content input[type=text]{
+.content input[type="text"] {
   padding: 5px;
   margin: 30px;
   border-radius: 5px;
@@ -43,7 +43,6 @@ body {
   gap: 20px;
 }
 
-
 .buttons button {
   padding: 10px 15px;
   text-align: center;
@@ -57,5 +56,5 @@ body {
 
 .buttons button:hover {
   background-color: #e7e7e7;
-   box-shadow: 0 0 0 5px black;
+  box-shadow: 0 0 0 5px black;
 }
