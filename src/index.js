@@ -8,7 +8,7 @@ const searchBtn = document.querySelector("#searchBtn");
 const catBtn = document.querySelector("#catBtn");
 const myKey = "QpLVtnUCvKkMTkPJVPxYtd8RvZ0XXgmR";
 
-const catEmoji = "\u{1F431}";
+const catEmoji = "\u{1F408}";
 const wrySmileEmoji = "\u{1F605}";
 const confuseEmoji = "\u{1F914}";
 const goodSmileEmoji = "\u{1F604}";
@@ -72,20 +72,16 @@ searchBtn.addEventListener("click", function showNewGIF() {
 });
 
 // Show the requested GIF about cats
-catBtn.addEventListener("click", function showCatGIF() {
-  fetch(`https://api.giphy.com/v1/gifs/translate?api_key=${myKey}&s=cats`, {
-    mode: "cors",
-  })
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (response) {
-      img.src = response.data.images.original.url;
-      setTimeout(() => {
-        alert(`You successfully summon some cute little things! ${catEmoji}`);
-      }, 2000);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+catBtn.addEventListener("click", async function showCatGIF() {
+  try {
+    const response = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=${myKey}&s=cats`, {mode: "cors"});
+    const catData = await response.json();
+    img.src = catData.data.images.original.url;
+    setTimeout(() => alert(`You successfully summon little cute cats! ${catEmoji}`), 2000);
+  } catch(error) {
+    // If there is some error thrown out when requesting the GIF, show the error message
+    img.src = connectError;
+    console.log(error);
+    setTimeout(() => alert(`Oops! There is some trouble here. Please try to search later. ${pensiveEmoji}`), 1000);
+  }
 });
