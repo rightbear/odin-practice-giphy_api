@@ -2,7 +2,7 @@
 
 Practice of "Working with APIs" in The Odin Project
 
-Github page: https://rightbear.github.io/odin-practice-giphy-api/
+Github page: https://rightbear.github.io/odin-practice-giphy_api/
 
 I set this project as private repository to protect my API keys of Giphy website. I will change the project back to public repository in the future.
 
