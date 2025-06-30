@@ -1,4 +1,4 @@
-# odin-practice-giphy-api
+# odin-practice-giphy_api
 
 Practice of "Working with APIs" in The Odin Project
 
